@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Registro</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=[Pixeles del mínimo ancho para visualizar bien la web]" />
+        <link rel="icon" href="img/logo01.png">
+        <link rel="icon" href="{% static 'img/logo01.png' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/estiloregistro.css' %}">
+        <script src="js/main.js"></script>
+        <script src="js/registro.js"></script>
+        
+</head>
+<body>
+        <div class="logo logo_main">Mis Perris</div>
+    
+        <div class="nav">
+            <div class="wrap">
+                <div class="logo logo_small">Mis Perris</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>    
+                        <li><a href="nosotros.html">Conocenos</a></li>    
+                        <li><a href="registro.html">Registro</a></li>           
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    <div class="contenedor-form">
+        <div class="toggle">
+            <span>Crear Cuenta</span>
+        </div>
+        <div class="formulario">
+            <h2>Iniciar sesion</h2>
+            <form action="#">
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input class="btn btn-primary" type="submit" value="INGRESAR">
+                <!-- <input type="button" value="Iniciar sesion"> -->
+            </form>
+        </div>
+
+        <div class="formulario" method="post">
+            <h2>Registrate</h2>
+            <form action="#">
+                <input class="form-control" id=txtName type="text" maxlength="200" minlength="2"
+                 onkeyup="validate()" placeholder="Usuario" required name="username"/>
+                 <span id="nameValidator" style="color:red"></span>
+
+                <input class="form-control"  type="password" placeholder="Contraseña" required name="password">
+
+                <input class="form-control"  type="number" id="txtAge" min="18" max="99"placeholder="ingrese edad" required name="edad"/>
+
+                <input class="form-control"  type="email" placeholder="Correo Electronico" required name="email">
+
+                <!-- <label for="txtRut">Rut:</label> -->
+
+                <input class="form-control"  id="txtRut" type="text" maxlength="10"
+                minlength="8"
+                   onkeyup="modifyText()" placeholder="Ingrese Rut" required name="rut"/>
+
+                <!-- <input type="text" placeholder="Rut" required> -->
+                <input class="form-control"  type="text" placeholder="Telefono" required name="telefono">
+                <div class="region">
+                <!-- <form>
+                        <label for="txtRegion">Region</label>
+                        <select id="txtRegion" oninput="selectCity()">     
+                        </select>
+                        <br />
+                        <label for="txtCity">Ciudad</label>
+                        <select id="txtCity">
+                
+                        </select>
+                       
+                        <script src="static/js/citySelector.js"></script>
+                        <button>Guardar</button>
+                    </form>  -->
+                </div>
+                <button class ="btn btn-primary" type="submit">Guardar</button>
+			</select>
+                <!-- <input type="button" value="Registrarse">  -->
+            </form>
+        </div>
+
+        <div class="reset-password">
+            <a href="#">Olvido su contraseña?</a>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/registro.js'%}"></script>
+</body>
+
+<footer>
+
+        <div class="container-footer-all">
+
+            <div class="container-body">
+
+               <div class="colum1">
+                <h1>Mas info</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                 Dignissimos dolore in maiores adipisci inventore tempora dolorem a nulla commodi sequi?</p>
+
+                </div>
+             <div class="colum2">
+                <h1>Redes Sociales</h1>
+                <div class="row">
+                    <img src="img/facebook.png" alt="">
+                    <label for="">Facebook</label>
+                </div>
+                 <div class="row">
+                    <img src="img/google.png" alt="">
+                    <label for="">Google+</label>
+                </div>
+                <div class="row">
+                    <img src="img/facebook.png" alt="">
+                    <label for="">Instagram</label>
+                </div>
+              </div>
+               <div class="colum3">
+                <h1>Informacion</h1>
+
+                <div class="row2">
+                    <img src="" alt="">
+                    <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim.</label>
+                </div>
+                <div class="row2">
+                    <img src="" alt="">
+                    <label>99100342</label>
+                </div>
+                <div class="row2">
+                    <img src="" alt="">
+                    <label>sebastian.diazpe@gmail.com</label>
+                </div>
+
+                </div>
+            </div>
+
+
+               <div class="container-footer">
+                    <div class="copyright">
+                        Todos los derechos reservados.
+                    </div>
+        
+                    <div class="information">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sint.
+                    </div>
+        
+        
+                </div>
+
+
+             
+        </div>
+
+        
+
+    </footer>
+</html>

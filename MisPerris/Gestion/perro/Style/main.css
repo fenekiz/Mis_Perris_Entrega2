@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;;
+    font-family: 'Gloria Hallelujah'
+}
+
+hr{
+    height: 1px;
+    border: none;
+    background: #7a7a7a;
+    max-width: 80%;
+    margin: auto;
+}
+
+p,h1{
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+
+.logo{
+    font-family: 'Lobster';
+    font-size: 70px;
+}
+
+.logo_main{
+    height: 200px;
+    padding: 20px;
+    background: lightblue;
+    color: black;
+    cursor: default;
+}
+
+.logo_small{
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+    margin-right: 50px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav{
+    float: left;
+    width: 100%;
+    background: lightgray;
+    color: white;
+    padding: 0 20px;
+    transition: .3s ease all;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0)
+}
+
+.nav .wrap{
+    position: relative;
+    left: -150px;
+    transition: 0.4s ease all;
+}
+
+nav{
+    display: inline-block;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    margin: 0;
+    padding: 0;
+    display: inline-block
+}
+
+
+nav a{
+    display: block;
+    padding: 20px;
+    margin: 0;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s ease all;
+}
+
+nav a:hover{
+    color:black;
+    background: gold;
+}
+
+.main{
+    background: white;
+    padding: 80px; 
+}
+
+body.nav_fixed .nav{
+    position: fixed;
+    top: 0;
+}
+
+body.nav_fixed .nav .wrap{
+    left: 0;
+}
+
+.btn-menu{
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: lightblue;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms cubic-bezier(1,0,0,1);
+    transform: transalteX(100px);
+}
+
+.btn-menu:hover{
+    transform: scale(1.2);
+    background: lightgreen;
+}
+
+
+/*menu responsivo*/
+
+@media screen and (max-width: 800px){
+    .btn-menu{
+        transform: translateX(0px);
+    }
+    .logo_main{
+        display: none;
+    }
+    .nav{
+        width: 70%;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        padding: 0px;
+        transform: translateX(-100%);
+    }
+
+    .nav .wrap{
+        left: 0;
+    }
+
+    nav{
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+
+    nav li{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+    }
+
+    .logo_small{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    nav a{
+        width: 100%;
+        display: block;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .nav-toggle{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+        transform: translateX(0%);
+    }
+
+    .main{
+        background: white;
+        padding: 80px; 
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    font-family: "Bold Italic", "cursive";
+}
+
+.objeto {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ED9D68;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.objeto a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F9DFCC;
+    display: block;
+    transition: 0.3s;
+}
+
+.objeto a:hover {
+    color: #A85043;
+}
+
+.objeto .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .objeto {padding-top: 15px;}
+    .objeto a {font-size: 18px;}
+  } */
+
+
+
+
+
+
+
+
+.content-all{
+    width: 200px;
+    margin-top: 500px;
+    margin-bottom: 500px;
+    left: 500px;
+    perspective: 800px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.content-carrousel{
+    
+    width: 100%;
+    position: absolute;
+    animation: rotar 20s infinite linear;
+    transform-style: preserve-3d;
+
+
+}
+
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.content-carrousel figure{
+    width: 100%;
+    height: 150%;
+    
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+}
+
+
+
+
+
+
+.content-carrousel:hover{
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+}
+
+
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg)
+translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg)
+translateZ(300px);}
+
+
+.content-carrousel img{
+    width: 100%;
+    transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+
+footer{
+    width: 100%;
+    background: lightblue;
+    color: black;
+    padding: 40px;
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1{
+    max-width: 400px;
+
+}
+
+.colum1 h1{
+    font-size: 22px;
+}
+.colum1 p{
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
+}
+
+.colum2{
+    max-width: 400px;
+
+}
+.colum2 h1{
+    font-size: 22px;
+
+}
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 30px;
+    height: 36px;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: white;
+}
+
+.colum3{
+    max-width: 400px;
+}
+.colum3 h1{
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 150px;
+}
